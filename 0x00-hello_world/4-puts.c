@@ -1,9 +1,10 @@
 #include <stdio.h>
 
-/* main - Entry point */
 int main(void)
-
+/**
+ * main - Entry point
+ */
 {
-	puts("Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle\n");
 	return(0);
 }
