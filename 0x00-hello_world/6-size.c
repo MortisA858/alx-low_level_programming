@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	char char_type;
 	int int_type;
 	long int long_int_type;
 	long long int long_long_int_type;
+	char char_type;
 	float float_type;
 
 	printf("Size of char: %lu byte(s)\n",(unsigned long)sizeof(char_type));
