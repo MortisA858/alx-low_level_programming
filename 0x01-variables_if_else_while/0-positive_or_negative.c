@@ -3,9 +3,9 @@
 #include <time.h>
 
 /**
- * Main - Entry point
+ * Main - Determine if a random number is positive, negative or zero
  *
- * Return : Always 0 (Success)
+ * Return : 0 success
  */
 int main(void)
 {
