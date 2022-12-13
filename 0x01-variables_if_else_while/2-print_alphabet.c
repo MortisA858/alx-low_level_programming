@@ -8,14 +8,12 @@
 
 int main(void)
 {
-	char x = 26
+	char x = 'a'
 	int i = 0
 
-	while (i < 26)
+	while (i < 26; x++, i++)
 	{
 		putchar(x);
-		x++;
-		i++;
 	}
 	putchar('\n');
 	return (0);
