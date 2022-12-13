@@ -6,7 +6,7 @@
  * Return : Accept 0 (Success)
  */
 
-int main(void)
+int main()
 {
 	for (int x = 'A'; x <= 'Z'; x++)
 	{
