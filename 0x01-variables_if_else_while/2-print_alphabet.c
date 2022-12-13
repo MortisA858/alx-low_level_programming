@@ -11,9 +11,11 @@ int main(void)
 	char x = 26
 	int i = 0
 
-	while (i < 26; x++; i++)
+	while (i < 26)
 	{
 		putchar(x);
+		x++;
+		i++;
 	}
 	putchar('\n');
 	return (0);
