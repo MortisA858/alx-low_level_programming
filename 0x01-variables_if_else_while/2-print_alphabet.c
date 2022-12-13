@@ -6,12 +6,15 @@
  * Return : Accept 0 (Success)
  */
 
-int main()
+int main(void)
 {
-	for (int x = 'a'; x <= 'z'; x++)
+	char x = 26
+	int i = 0
+
+	while (i < 26; x++; i++)
 	{
-		putchar(tolower(x));
+		putchar(x);
 	}
-	
+	putchar('\n');
 	return (0);
 }
