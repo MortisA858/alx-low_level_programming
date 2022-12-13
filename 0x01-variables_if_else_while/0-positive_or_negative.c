@@ -14,17 +14,17 @@ int main(void)
 
 	if (n > 0)
 	{
-		printf("%d is positive\n");
+		printf("%d is positive\n", rand());
 	}
 
 	else if (n < 0)
 	{
-		printf("%d is negative\n");
+		printf("%d is negative\n", rand());
 	}
 
 	else
 	{
-		printf("%d is zero\n");
+		printf("%d is zero\n", rand());
 	}
 
 
