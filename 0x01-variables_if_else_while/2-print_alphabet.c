@@ -5,7 +5,6 @@
  *
  * Return : Accept 0 (Success)
  */
-
 int main(void)
 {
 	char x = 'a';
