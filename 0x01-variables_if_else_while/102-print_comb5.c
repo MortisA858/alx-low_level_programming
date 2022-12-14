@@ -11,7 +11,6 @@ int main(void)
 	int x;
 	int y;
 	int z;
-	
 	x = 0;
 	while (x <= 99)
 	{
