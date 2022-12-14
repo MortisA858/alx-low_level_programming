@@ -18,7 +18,7 @@ int main(void)
 		i++;
 	}
 	ch = 'A';
-	i = 0;	
+	i = 0;
 	while (i < 26)
 	{
 		putchar(ch);
