@@ -10,7 +10,7 @@ int main(void)
 {
 	int x;
 	int y;
-	int z
+	int z;
 	
 	x = 0;
 	while (x <= 99)
@@ -18,7 +18,7 @@ int main(void)
 		y = x + 1;
 		while (y <= 99)
 		{
-			z = !(x ++ 98 && y == 99);
+			z = !(x == 98 && y == 99);
 			putchar(48 + x / 10);
 			putchar(48 + x % 10);
 			putchar(' ');
