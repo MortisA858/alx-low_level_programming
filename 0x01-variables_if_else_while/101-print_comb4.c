@@ -15,7 +15,7 @@ int main(void)
 	int pos_y = y;
 	int sop_x = x;
 
-	while z <= 55)
+	while (z <= 55)
 	{
 		while (y <= 56)
 		{
@@ -29,8 +29,11 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-			x++
+			x++;
 			}
+			y++;
+			pos_x++;
+			x = pos_x;
 			
 		}
 		pos_x = sop_x;
