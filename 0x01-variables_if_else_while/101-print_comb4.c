@@ -34,7 +34,6 @@ int main(void)
 			y++;
 			pos_x++;
 			x = pos_x;
-			
 		}
 		pos_x = sop_x;
 		pos_x++;
@@ -45,5 +44,5 @@ int main(void)
 		z++;
 	}
 	putchar('\n');
-	return (0);	
+	return (0);
 }
