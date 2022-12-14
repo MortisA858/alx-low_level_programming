@@ -11,7 +11,7 @@ int main(void)
 	char ch = 'a';
 	int i = 48;
 
-	while (i< 58)
+	while (i < 58)
 	{
 		putchar(i);
 		i++;
@@ -21,8 +21,8 @@ int main(void)
 	{
 		putchar(ch);
 		ch++;
-		i++
+		i++;
 	}
 	putchar('\n');
-	return (0)
+	return (0);
 }
