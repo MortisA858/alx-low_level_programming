@@ -7,15 +7,15 @@
  */
 int main(void)
 {
-	char x = 'a';
-	int i = 0;
-	/* Your code goes here */
-	while (i < 26)
-	{
-		putchar(x);
-		x++;
-		i++;
-	}
-	putchar('\n');
-	return (0);
+		char ch = 'a';
+		int i = 0;
+		/* your code goes there */
+		while (i < 26)
+		{
+			putchar(ch);
+			ch++;
+			i++;
+		}
+		putchar('\n');
+		return (0);
 }
