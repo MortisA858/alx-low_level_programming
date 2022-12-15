@@ -20,8 +20,5 @@ void print_alphabet_x10(void)
 		}
 	}	
 	y++;
-
     	_putchar('\n');
-
-    	return (0);
 }
