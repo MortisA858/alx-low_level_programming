@@ -1,14 +1,23 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * main - print_putchar
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 
 int main(void)
 {
-	putchar("_putchar\n");
+	char wording[] = {'_','p','u','t','c','h','a','r'};
+	int x = 0;
+
+	while(x < 9)
+	{
+		_putchar(wording[x]);
+		x = x + 1;
+	}
+
+	_putchar("\n");
 
 	return (0);
 }
