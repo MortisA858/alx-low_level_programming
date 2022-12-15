@@ -1,23 +1,22 @@
 #include "main.h"
 
 /**
- * main - print_putchar
+ * main - print _putchar
  *
- * Return: 0
+ * Author: AlgoSierra
+ *
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char wording[] = {'_','p','u','t','c','h','a','r'};
-	int x = 0;
+	char *str = "_putchar";
 
-	while(x < 9)
-	{
-		_putchar(wording[x]);
-		x = x + 1;
+	while(*str)
+        {
+	       	_putchar(*str);
+		str++;
 	}
-
-	_putchar("\n");
+	_putchar('\n');
 
 	return (0);
 }
