@@ -9,7 +9,7 @@ int main(void)
 
 	x = sum = 0;
 	y = 1;
-	for (count = 0; count < 50; count ++)
+	for (count = 0; count < 50; count++)
 	{
 		z = x + y;
 		x = y;
