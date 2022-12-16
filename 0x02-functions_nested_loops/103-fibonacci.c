@@ -15,7 +15,7 @@ int main(void)
 		x = y;
 		y = z;
 		if (z % 2 == 0 && z < 4000000)
-			sum++ z;
+			sum += z;
 	}
 	printf("%lu\n", sum);
 	return (0);
