@@ -5,21 +5,23 @@
  * _putchar: function that is used in the code
  * @2: Number to skip
  * @4: Number to skip
- * Return: Always 0.
+ * Return: Number 0 to 9.
  */
-int print_most_number(void)
+void print_most_number(void)
 {
-	int i;
+	int i = 0;
 
-	int i;
-	while(i <= 9)
+	for (; i <= 9; i++)
 	{
-	if (i == 2 && i == 4)
-	{
-		continue
+		if (i == 2 || i == 4)
+		{
+			continue;
+		}
+		else
+		{
+			_putchar(i + '0');
+		}
 	}
-		_putchar(i + '0');
-		i++
-	}
+
 	_putchar('\n');
 }
