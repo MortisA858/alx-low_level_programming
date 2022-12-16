@@ -27,7 +27,7 @@ int main(void)
 	{
 		carry = (x + y) / 1000;
 		z = ( x + y) - carry * 1000;
-		c = (a + b) carry;
+		c = (a + b) + carry;
 		x = y;
 		y = z;
 		a= b;
@@ -38,7 +38,7 @@ int main(void)
 			printf("%lu0%lu", c, z);
 		if (count != 98)
 			printf(", ");
-		count++
+		count++;
 	}
 	putchar('\n');
 	return (0);
