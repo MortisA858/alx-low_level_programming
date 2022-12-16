@@ -2,18 +2,11 @@
 
 /**
  * add - function that adds two integers and return the results
- *
+ * @a: First integer to be added
+ * @b: Seconde integer to be added
  * Return: 0
  */
-int add(int, int)
+int add(int a, int b)
 {
-	int i;
-	int j;
-	int sum;
-
-	while ( sum = i + j)
-	{
-		_putchar(sum)
-	}
-	_putchar('\n')
+	return (a + b);
 }
