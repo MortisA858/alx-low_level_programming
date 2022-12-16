@@ -5,7 +5,7 @@
  * @i: it's the int that will be used for the argument of the function
  * Return: Always 0 (Success)
  */
-int print_last_digit
+int print_last_digit(int i)
 {
 	if (i > 0 || i == 0)
 	{
