@@ -11,6 +11,6 @@ int main(void)
 	for (i = 0; i < 1024; i++)
 		if (i % 3 == 0 || i % 5 == 0)
 			j++;
-	prinf("%d\n", j);
+	printf("%d\n", j);
 	return (0);
 }
