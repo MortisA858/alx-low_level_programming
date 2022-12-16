@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - function that prints natural numbers from n to 98, adds new line.
+ * print_to_98 - function that prints natural numbers from n to 98, adds \n.
  * @n: First that begins the count
  */
 void print_to_98(int n)
