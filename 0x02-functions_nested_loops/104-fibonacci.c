@@ -26,11 +26,11 @@ int main(void)
 	while (count <= 98)
 	{
 		carry = (x + y) / 1000;
-		z = ( x + y) - carry * 1000;
+		z = (x + y) - carry * 1000;
 		c = (a + b) + carry;
 		x = y;
 		y = z;
-		a= b;
+		a = b;
 		b = c;
 		if (z >= 100)
 			printf("%lu%lu", c, z);
