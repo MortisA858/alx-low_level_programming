@@ -8,16 +8,12 @@
 
 int main(void)
 {
-	long int num = 612852475143;
-	int prime_num;
+	unsigned long int i, num = 612852475143;
 
-	for (prime_num = 2; prime_num <= sqrt(num); prime_num++)
+	for (i = 3; i < 782849; i += 2)
 	{
-		if (num % prime_num == 0)
-		{
-			num = num / prime_num;
-			prime = 1;
-		}
+		while ((num % i == 0) && (num != i)
+				num = num / i;
 	}
 	printf("%ld\n", num);
 	return (0);
