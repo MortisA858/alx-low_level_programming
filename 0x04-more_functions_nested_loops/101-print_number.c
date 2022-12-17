@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_number - functin that prints integers
- * @i: this acts as an input integer parameter
+ * @n: this acts as an input integer parameter
  * Return: 0
  */
 void print_number(int n)
