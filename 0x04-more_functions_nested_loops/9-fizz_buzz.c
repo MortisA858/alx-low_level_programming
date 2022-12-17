@@ -9,6 +9,7 @@
  * FizzBuzz for mulltiples of both of them.
  * Return: Always 0.
  */
+
 int main(void)
 {
 	int i;
