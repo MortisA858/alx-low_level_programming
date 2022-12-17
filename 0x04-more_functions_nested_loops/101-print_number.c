@@ -4,18 +4,18 @@
  * @i: this acts as an input integer parameter
  * Return: 0
  */
-void print_number(int i)
+void print_number(int n)
 {
-	unsigned int i = j;
+	unsigned int x = n;
 
-	if (i < 0)
+	if (n < 0)
 	{
 		_putchar(45);
-		j = -j;
+		x = -x;
 	}
-	if (j / 10)
+	if (x / 10)
 	{
-		print_number(j / '0');
+		print_number(x / '0');
 	}
-	_putchar(j % 10 + '0');
+	_putchar(x % 10 + '0');
 }
