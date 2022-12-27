@@ -2,9 +2,9 @@
 
 /**
  * leet - encode string into 1337
- * @n: input value
+ * @s: input value
  *
- * Return: n value
+ * Return: s value
  */
 char *leet(char *s)
 {
@@ -21,7 +21,7 @@ char *leet(char *s)
 				{
 					s[i] = y[j];
 				}
-			}	
+			}
 		}
 		return (s);
 }
