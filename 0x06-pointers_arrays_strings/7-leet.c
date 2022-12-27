@@ -10,26 +10,18 @@ char *leet(char *s)
 {
 		int i;
 		int j;
-		int k;
-
 		char x[] = "aAeEoOtTlL";
-		char y[] = "0011334477";
+		char y[] = "4433007711";
 
-		i = 0;
-		while (s[i] != '\0')
+		for (i = 0; s[i] != '\0'; i++)
 		{
-			j = 0;
-			k = 0;
-			while (x[j] != '\0')
+			for (j = 0; j < 10; j++)
 			{
 				if (s[i] == x[j])
 				{
-					k = j;
-					s[i] = y[k];
+					s[i] = y[j];
 				}
-				j++;
-			}
-			i++;
+			}	
 		}
 		return (s);
 }
