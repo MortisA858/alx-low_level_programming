@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - function that returns the factorial of a given number
+ * factorial - function that returns the factorial of a given number
  * @n: integer
  *
  * Return: factorial.
