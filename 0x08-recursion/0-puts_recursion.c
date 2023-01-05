@@ -4,7 +4,7 @@
  * _puts_recursion - function that prints a string
  * @s: string
  *
- * Return: string.
+ * Return: void.
  */
 void _puts_recursion(char *s)
 {
