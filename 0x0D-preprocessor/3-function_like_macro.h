@@ -3,8 +3,7 @@
 
 /**
  * function-like macro ABS(x) that computes the absolute value of a number x
- * define - define macro
- * @ABS: macro
+ * @ABS(x): macro
  * @x: value
  */
 
