@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#define ABS(x) x
+#define ABS(x) (x)
 
 /**
  * define - define macro
