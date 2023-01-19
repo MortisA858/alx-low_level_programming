@@ -2,7 +2,6 @@
 #define MAIN_H
 
 /**
- * 
  * define - define macro
  * @SUM(x, y): macro
  * @x: value
