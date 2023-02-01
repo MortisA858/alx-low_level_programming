@@ -20,20 +20,26 @@ return count: We return the count variable, which represents the number of eleme
 2. Add node
 Explanation:
 
-list_t *new_node = malloc(sizeof(list_t)): We allocate memory for a new list_t node using the malloc function. malloc returns a pointer to a block of memory of the specified size.
 
-if (new_node == NULL): If the memory allocation fails, malloc returns NULL, so we check if new_node is NULL. If it is, we return NULL to indicate that the node creation failed.
+The function add_node adds a new node to a linked list at the beginning of the list. It takes two arguments: head, which is a double pointer to the head of the list, and str, which is the string to be duplicated and stored in the new node.
 
-new_node->str = strdup(str): We duplicate the string str using the strdup function and store its address in the new node's str member. strdup returns NULL if memory allocation fails, so we check if new_node->str is NULL.
+list_t *new; creates a pointer to a list_t structure called new.
 
-if (new_node->str == NULL): If strdup fails, we free the memory of the newly created node using free and return NULL to indicate that the node creation failed.
+new = malloc(sizeof(list_t)); allocates memory for the new node using malloc and stores the address in new.
 
-new_node->next = *head: We make the new node's next member point to the current head of the list.
+if (new == NULL) checks if the memory allocation failed, and returns NULL if it did.
 
-*head = new_node: We make the new node the new head of the list by updating the head pointer.
+new->str = strdup(str); duplicates the string str using strdup and stores it in the str member of the new node.
 
-return new_node: We return the address of the new node to indicate that the node creation was successful.
+if (new->str == NULL) checks if the string duplication failed, and returns NULL if it did. If the string duplication succeeded, it continues to the next step.
 
+new->len = strlen(str); stores the length of the duplicated string in the len member of the new node.
+
+new->next = *head; stores the address of the current head of the list in the next member of the new node.
+
+*head = new; updates the head of the list to be the address of the new node.
+
+return (new); returns the address of the new node.
 
 3. Add node at the end
 
