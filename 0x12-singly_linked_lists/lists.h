@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 /**
  * struct list_s - singly linked list
@@ -20,8 +21,9 @@ typedef struct list_s
     struct list_s *next;
 } list_t;
 /**
- * typdef struct list_s - defines a custom data type 'list_t' using a structure.
- * const list_t *h - a pointer to a constant list_t structure, representing the head of the linked list.
+ * typdef struct list_s - defines a custom data type 'list_t' using a structure
+ * const list_t *h - a pointer to a constant list_t structure,
+ * representing the head of the linked list.
  */
 
 int _putchar(char c);
