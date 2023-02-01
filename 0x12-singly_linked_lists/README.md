@@ -58,3 +58,4 @@ The #include <stdio.h> directive includes the standard input/output header file,
 The message function is declared with the void return type and the __attribute__((constructor)) attribute. This attribute makes the message function execute before the main function.
 
 The message function uses the printf function to print the specified string.
+6. Real programmers can write assembly code in any language
