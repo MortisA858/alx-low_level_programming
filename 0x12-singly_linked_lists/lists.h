@@ -16,7 +16,7 @@ typedef struct list_s
 	char *str;
 	unsigned int len;
 	struct list_s *next;
-} list_t;
+}list_t;
 /**
  * typdef struct list_s - defines a custom data type 'list_t' using a structure
  * const list_t *h - a pointer to a constant list_t structure,
