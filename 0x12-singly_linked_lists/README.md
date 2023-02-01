@@ -1,4 +1,7 @@
 0. Print list
+Explanation:
+
+This is a function in the C programming language, named print_list, that takes a pointer to a list_t structure as an argument and returns an integer of type size_t. The function iterates over the linked list represented by the list_t structure, starting from the head h, and for each node in the list, it prints its length (h->len) and string value (h->str) if it exists, or "0 (nil)" otherwise. The function returns the number of nodes processed, which is stored in the count variable. The linked list is traversed using a while loop, which continues as long as h is not NULL. At each iteration, the function prints the current node's information, increments count, and moves to the next node by updating h to h->next.
 
 
 1. List length
