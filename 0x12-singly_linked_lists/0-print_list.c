@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_list - function that takes as input a constant pointer to a
- * list_t (structure representing the head of a singley linked list) and
- * @h: pointer to of a linked list
+ * print_list - function that prints all elements of a llinked list
+ * list_t - (structure representing the head of a singley linked list) and
+ * @h: pointer to the list_t to print
  *
  * Return: the number of nodes in the linked list
  */
