@@ -11,7 +11,7 @@
 size_t print_list(const list_t *h)
 {
 	/* Variable count stores number of nodes and its value is set to 0. */
-	size_t count = 0;
+	size_t count = 1;
 	const list_t *temp = h;
 
 	/* traverse through the linked list */
