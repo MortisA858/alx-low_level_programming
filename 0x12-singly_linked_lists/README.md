@@ -51,4 +51,10 @@ return (new_node); returns the address of the new node.
 
 
 5. The Hare and the Tortoise
+Explanation:
 
+The #include <stdio.h> directive includes the standard input/output header file, which provides the printf function.
+
+The message function is declared with the void return type and the __attribute__((constructor)) attribute. This attribute makes the message function execute before the main function.
+
+The message function uses the printf function to print the specified string.
