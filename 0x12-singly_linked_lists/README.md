@@ -25,21 +25,21 @@ The function add_node adds a new node to a linked list at the beginning of the l
 
 list_t *new; creates a pointer to a list_t structure called new.
 
-new = malloc(sizeof(list_t)); allocates memory for the new node using malloc and stores the address in new.
+new_node = malloc(sizeof(list_t)); allocates memory for the new node using malloc and stores the address in new.
 
-if (new == NULL) checks if the memory allocation failed, and returns NULL if it did.
+if (new_node == NULL) checks if the memory allocation failed, and returns NULL if it did.
 
-new->str = strdup(str); duplicates the string str using strdup and stores it in the str member of the new node.
+new_node->str = strdup(str); duplicates the string str using strdup and stores it in the str member of the new node.
 
-if (new->str == NULL) checks if the string duplication failed, and returns NULL if it did. If the string duplication succeeded, it continues to the next step.
+if (new_node->str == NULL) checks if the string duplication failed, and returns NULL if it did. If the string duplication succeeded, it continues to the next step.
 
-new->len = strlen(str); stores the length of the duplicated string in the len member of the new node.
+new_node->len = strlen(str); stores the length of the duplicated string in the len member of the new node.
 
-new->next = *head; stores the address of the current head of the list in the next member of the new node.
+new_node->next = *head; stores the address of the current head of the list in the next member of the new node.
 
-*head = new; updates the head of the list to be the address of the new node.
+*head = new_node; updates the head of the list to be the address of the new node.
 
-return (new); returns the address of the new node.
+return (new_node); returns the address of the new node.
 
 3. Add node at the end
 
