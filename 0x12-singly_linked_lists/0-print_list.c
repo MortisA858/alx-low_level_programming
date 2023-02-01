@@ -12,23 +12,24 @@ size_t print_list(const list_t *h)
 {
 	/* Variable count stores number of nodes and its value is set to 0. */
 	size_t count = 0;
+	const list_t *temp = h;
 
 	/* traverse through the linked list */
-	while (h)
+	while (temp)
 	{
 		/* If 'str' member is 'NULL', print [0] (nil) */
 	       /* If 'str' member is not 'NULL', print [h->len] h-> str */
-		if (h->str)
+		if (temp->str == NULL)
 		{
-			printf("[%u] %s\n", h->len, h->str);
+			printf("[%d] (nill)\n", temp->len);
 		}
 		else
 		{
-			printf("[0] (nil)\n");
+			printf("[%d] %s\n", temp->len, temp->str);
 		}
 
+		temp = temp->next;
 		count++;
-		h = h->next;
 	}
 
 	return (count);
