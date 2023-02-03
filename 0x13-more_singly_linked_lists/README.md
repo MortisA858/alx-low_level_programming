@@ -93,6 +93,20 @@ Finally, the function returns the value of n, which is the data of the deleted h
 
 
 7. Get node at index
+Explanation:
+
+The function takes a pointer head to the first node of the linked list and an index as input.
+
+The function declares a variable i to keep track of the current index, a pointer node to traverse the linked list, and sets it to head.
+
+The function uses a for loop to iterate through the linked list. The loop continues as long as i is less than index and node is not NULL.
+
+In each iteration, the function sets node to the next node in the linked list (node->next).
+
+After the loop, if i is equal to index, the function returns node, which is the nth node.
+
+If i is not equal to index, the function returns NULL, indicating that the node at the given index does not exist in the linked list.
+
 
 
 8. Sum list
