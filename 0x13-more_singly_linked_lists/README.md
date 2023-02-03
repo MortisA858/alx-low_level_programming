@@ -129,20 +129,40 @@ Explanation:
 
 The function takes a pointer head to a pointer to the first node of the linked list, an idx (index of the list where the new node should be added), and an n (data for the new node) as input.
 
-The function declares a variable i to keep track of the current index, a pointer node to traverse the linked list, and a pointer new to the new node, and sets node to *head.
+The function declares a variable i to keep track of the current index, a pointer node to traverse the linked list, and a pointer new_node to the new node, and sets node to *head.
 
 The function uses a for loop to iterate through the linked list until it reaches the node just before the desired index (idx - 1). The loop continues as long as i is less than idx - 1 and node is not NULL.
 
 If node is NULL, the function returns NULL as it is not possible to add the new node at the given index.
 
-The function uses malloc to allocate memory for the new node and initializes the new node's data (new->n = n). If malloc returns NULL, the function returns NULL indicating that memory allocation failed.
+The function uses malloc to allocate memory for the new_node and initializes the new node's data (new_node->n = n). If malloc returns NULL, the function returns NULL indicating that memory allocation failed.
 
-The function sets the next node of the new node to be the node that used to come after the node just before the desired index (new->next = node->next).
+The function sets the next node of the new node to be the node that used to come after the node just before the desired index (new_node->next = node->next).
 
-The function sets the next node of the node just before the desired index to be the new node (node->next = new).
+The function sets the next node of the node just before the desired index to be the new node (node->next = new_node).
 
 The function returns the pointer to the new node.
 
 
 
 10. Delete at index
+Explanation:
+
+The function takes a pointer head to a pointer to the first node of the linked list, and an index (index of the node that should be deleted) as input.
+
+The function checks if the linked list is empty, and returns -1 if it is.
+
+The function declares a variable i to keep track of the current index, a pointer node to traverse the linked list, and a pointer temp to the node that will be deleted, and sets node to *head.
+
+If the index of the node to be deleted is 0 (i.e., the head node), the function sets the head node to be the next node (*head = node->next), frees the memory occupied by the head node (free(node)), and returns 1 indicating success.
+
+The function uses a for loop to iterate through the linked list until it reaches the node just before the desired index (index - 1). The loop continues as long as i is less than index - 1 and node->next is not NULL.
+
+If node->next is NULL, the function returns -1 indicating that the node does not exist at the given index.
+
+The function sets temp to the node that will be deleted (temp = node->next), sets the next node of the node just before the desired index to be the node that comes after the node to be deleted (node->next = temp->next), and frees the memory occupied by the node to be deleted (free(temp)).
+
+The function returns 1 indicating success.
+
+
+
