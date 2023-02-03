@@ -110,9 +110,39 @@ If i is not equal to index, the function returns NULL, indicating that the node 
 
 
 8. Sum list
+Explanation:
+
+The function takes a pointer head to the first node of the linked list as input.
+
+The function declares a variable sum to store the sum of all the data and a pointer node to traverse the linked list, and sets it to head.
+
+The function uses a while loop to iterate through the linked list. The loop continues as long as node is not NULL.
+
+In each iteration, the function adds the current node's data (node->n) to sum and sets node to the next node in the linked list (node->next).
+
+After the loop, the function returns sum, which is the sum of all the data in the linked list. If the list is empty, sum will be 0.
+
 
 
 9. Insert
+Explanation:
+
+The function takes a pointer head to a pointer to the first node of the linked list, an idx (index of the list where the new node should be added), and an n (data for the new node) as input.
+
+The function declares a variable i to keep track of the current index, a pointer node to traverse the linked list, and a pointer new to the new node, and sets node to *head.
+
+The function uses a for loop to iterate through the linked list until it reaches the node just before the desired index (idx - 1). The loop continues as long as i is less than idx - 1 and node is not NULL.
+
+If node is NULL, the function returns NULL as it is not possible to add the new node at the given index.
+
+The function uses malloc to allocate memory for the new node and initializes the new node's data (new->n = n). If malloc returns NULL, the function returns NULL indicating that memory allocation failed.
+
+The function sets the next node of the new node to be the node that used to come after the node just before the desired index (new->next = node->next).
+
+The function sets the next node of the node just before the desired index to be the new node (node->next = new).
+
+The function returns the pointer to the new node.
+
 
 
 10. Delete at index
