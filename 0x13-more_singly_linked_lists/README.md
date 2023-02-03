@@ -78,6 +78,18 @@ The loop continues until the value pointed to by *head is NULL, at which point t
 
 
 6. Pop
+Explanation:
+
+First, the function checks if the linked list is empty by checking if *head is NULL. If it is, the function returns 0.
+
+If the linked list is not empty, the function declares a pointer temp to the current head node and a variable n to store the head node's data.
+
+The function sets the value of *head to the next node in the linked list (i.e., temp->next), effectively deleting the current head node.
+
+The function frees the memory occupied by the deleted head node by calling free(temp).
+
+Finally, the function returns the value of n, which is the data of the deleted head node.
+
 
 
 7. Get node at index
