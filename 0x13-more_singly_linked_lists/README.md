@@ -37,6 +37,18 @@ Finally, the count variable is returned as the result of the function, indicatin
 
 
 4. Free list
+Explanation:
+
+The function takes a pointer head to the first node in a linked list of type listint_t.
+
+A temporary pointer temp is declared and initialized to head.
+The while loop runs as long as head is not equal to NULL.
+
+Within the loop, temp is set to head, head is set to head->next (which points to the next node in the list).
+
+The memory pointed to by temp is freed using the free function.
+
+The loop continues to run, freeing each node in the list, until head becomes NULL.
 
 
 5. Free
