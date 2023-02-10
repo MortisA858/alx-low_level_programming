@@ -1,30 +1,39 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - prints a linked list with a loop
- * @head: head of the liked list
+ * print_listint_safe - prints a listint_t linked list, even if it has a loop
+ * @head: pointer to the head of list
  *
- * Return: numbe rof nodes in the list
+ * Return: number of nodes in the list
  */
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t num = 0;
-	long int diff;
+	const listint_t *tmp_n = NULL;
+	const listint_t *l_n = NULL;
+	size_t counter = 0;
+	size_t new_n;
 
-	while (head)
+	tmp_n = head;
+	while (tmp_n)
 	{
-		diff = head - head->next;
-		num++;
-		printf("[%p] %d\n", (void *)head, head->n);
-		if (diff > 0)
-			head = head->next;
-		else
+		printf("[%p] %d\n", (void *)tmp_n, tmp_n->n);
+		counter++;
+		tmp_n = tmp_n->next;
+		l_n = head;
+		new_n = 0;
+		while (new_n < counter)
 		{
-			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-			break;
+			if (tmp_n == l_n)
+			{
+				printf("-> [%p] %d\n", (void *)tmp_n, tmp_n->n);
+				return (counter);
+			}
+			l_n = l_n->next;
+			new_n++;
 		}
+		if (!head)
+			exit(98);
 	}
-
-	return (num);
+	return (counter);
 }
