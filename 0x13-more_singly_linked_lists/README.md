@@ -28,12 +28,68 @@ Finally, the count variable is returned as the result of the function, indicatin
 
 
 1. List length
+Explanation:
+The function listint_len takes a pointer to a linked list as an argument (const listint_t *h), and it returns the length of the linked list.
+
+The variable count is used to keep track of the length of the linked list. It is initialized to 0.
+
+The variable current is used to iterate through the linked list. It is initialized to h (the head of the linked list).
+
+The while loop will continue to execute as long as current is not equal to NULL.
+
+In each iteration of the loop, the value of count is incremented by 1.
+
+The value of current is updated to the next node in the linked list by assigning it to current->next.
+
+Finally, the function returns the value of count, which is the length of the linked list.
+
 
 
 2. Add node
+Explanation:
+This function adds a new node to the beginning of a linked list.
+
+The function first allocates memory for a new node using the malloc function and checks if it was successful by checking if the returned pointer is NULL.
+If the memory allocation was not successful, the function returns NULL.
+If the memory allocation was successful, the function assigns the value of n to the n field of the new node.
+The next field of the new node is assigned the current head of the linked list *head.
+The head of the linked list is then updated to the newly created node.
+The function finally returns the address of the newly created node.
+
 
 
 3. Add node at the end
+Explanation:
+This function add_nodeint_end is used to add a new node at the end of a linked list. Here is what it does line by line:
+
+struct listint_s *new_node, *temp;: declares two pointers of type listint_t named new_node and temp.
+
+new_node = malloc(sizeof(listint_t));: creates a new node of type listint_t by allocating memory to the new_node pointer.
+
+if (new_node == NULL): checks if the new_node is NULL, which means the memory allocation failed.
+
+{return (NULL);}: returns NULL in case of memory allocation failure.
+
+new_node->n = n;: assigns the argument n to the field n of the newly created node.
+
+new_node->next = NULL;: sets the next field of the newly created node to NULL, since it is going to be the last node of the linked list.
+
+if (*head == NULL): checks if the head of the linked list is NULL.
+
+{*head = new_node;}: sets the head of the linked list to the newly created node if it was NULL.
+
+else: if the head of the linked list is not NULL.
+
+{temp = *head;: sets temp to the head of the linked list.
+
+while (temp->next != NULL): iterates through the linked list until the last node is reached.
+
+temp = temp->next;: sets temp to the next node in the linked list.
+
+temp->next = new_node;: sets the next field of the last node to the newly created node.
+
+return (new_node);: returns the newly created node.
+
 
 
 4. Free list
@@ -126,22 +182,13 @@ After the loop, the function returns sum, which is the sum of all the data in th
 
 9. Insert
 Explanation:
+This function takes as input a double pointer to the head of a linked list, an index idx, and a value n. It returns a pointer to the newly created node.
 
-The function takes a pointer head to a pointer to the first node of the linked list, an idx (index of the list where the new node should be added), and an n (data for the new node) as input.
+The function starts by checking if the head pointer is NULL. If it is, the function returns NULL. Then, it checks if the index is not 0. If it's not, the function traverses the linked list until it reaches the node at the idx - 1 position. If it reaches the end of the linked list without finding the node at the idx - 1 position, it returns NULL.
 
-The function declares a variable i to keep track of the current index, a pointer node to traverse the linked list, and a pointer new_node to the new node, and sets node to *head.
+Next, the function creates a new node and assigns the value n to it. If the index is 0, the function updates the head of the linked list to point to the new node and sets the next pointer of the new node to the previous head. If the index is not 0, the function updates the next pointer of the node at the idx - 1 position to point to the new node and the next pointer of the new node to point to the node previously pointed to by the node at the idx - 1 position.
 
-The function uses a for loop to iterate through the linked list until it reaches the node just before the desired index (idx - 1). The loop continues as long as i is less than idx - 1 and node is not NULL.
-
-If node is NULL, the function returns NULL as it is not possible to add the new node at the given index.
-
-The function uses malloc to allocate memory for the new_node and initializes the new node's data (new_node->n = n). If malloc returns NULL, the function returns NULL indicating that memory allocation failed.
-
-The function sets the next node of the new node to be the node that used to come after the node just before the desired index (new_node->next = node->next).
-
-The function sets the next node of the node just before the desired index to be the new node (node->next = new_node).
-
-The function returns the pointer to the new node.
+Finally, the function returns a pointer to the newly created node.
 
 
 
@@ -166,7 +213,29 @@ The function returns 1 indicating success.
 
 
 
-11. Print (safe version)
+11. 
+Explanation
+This function reverse_listint is used to reverse a linked list. It takes in a double pointer to the head of the linked list, and returns a pointer to the head of the reversed linked list. The function uses three pointers prev, next, and head, which are initially set to NULL.
+
+Check if the input head is NULL or the linked list is empty. If either of these conditions is true, the function returns NULL.
+
+Check if the linked list has only one node. If so, the function returns the head.
+
+The while loop iterates through the linked list until the head is NULL.
+
+In each iteration of the while loop, the next pointer is set to the next node in the list.
+
+The head node's next pointer is then set to prev, which is the previously reversed node.
+
+prev is then set to head and head is set to next.
+
+The while loop continues until all the nodes in the linked list have been reversed.
+
+Finally, head is set to prev and the reversed linked list is returned.
+
+
+
+12. Print (safe version)
 Explanation:
 Two pointers tmp_n and l_n are initialized to NULL, and two variables counter and new_n are initialized to 0.
 
@@ -196,7 +265,7 @@ Finally, the function returns counter.
 
 
 
-12. Free (safe version)
+13. Free (safe version)
 Explanation:
 A function free_listint_safe is defined which takes a double pointer h to the head of the linked list as an argument. The function returns the size of the list that was freed.
 
@@ -218,3 +287,22 @@ Finally, the function returns len.
 
 
 
+14. Find the Loop
+Explanation:
+The function find_listint_loop takes a pointer head to the head of the linked list as an argument and returns a pointer to the node that starts the loop.
+
+Two pointers slow and fast are declared and initialized to head.
+
+The function checks if head is NULL, and if it is, it returns NULL.
+
+The while loop starts by checking if slow, fast, and fast->next are all not NULL. If they are not, the loop will enter.
+
+Within the loop, fast moves two nodes forward in the linked list (to fast->next->next) while slow moves one node forward (to slow->next).
+
+If fast and slow are equal, it means that there is a loop in the linked list.
+
+In this case, slow is reset to head and the two pointers slow and fast move one node forward in the linked list at a time. The loop continues until slow and fast are equal. The node that they are both pointing to is the start of the loop, so it is returned.
+
+If fast and slow are not equal, the loop continues until slow, fast, or fast->next is NULL.
+
+If the loop finishes and fast and slow are still not equal, it means that there is no loop in the linked list, so NULL is returned.
