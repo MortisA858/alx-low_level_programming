@@ -166,3 +166,31 @@ The function returns 1 indicating success.
 
 
 
+11. Print (safe version)
+Explanation:
+Two pointers tmp_n and l_n are initialized to NULL, and two variables counter and new_n are initialized to 0.
+
+tmp_n is set to the head of the list.
+
+The first while loop starts by checking if tmp_n is not NULL. If it is not, it will enter the loop.
+
+Within the loop, the value of the node that tmp_n is pointing to is printed with the address of the node, and counter is incremented by 1.
+
+tmp_n is set to tmp_n->next, and l_n is set to the head of the list. new_n is reset to 0.
+
+The second while loop starts by checking if new_n is less than counter. If it is, it will enter the loop.
+
+Within the second loop, the function checks if tmp_n is equal to l_n. If they are equal, it means there is a loop in the linked list, and the value of the node that tmp_n is pointing to is printed with the address of the node.
+
+If there is a loop in the linked list, the function returns counter.
+
+If there is no loop in the linked list, l_n is set to l_n->next and new_n is incremented by 1.
+
+The second while loop continues until new_n is not less than counter.
+
+After the second loop, the function checks if the head of the list is NULL. If it is, the program exits with a status of 98.
+
+The first while loop continues until tmp_n is NULL.
+
+Finally, the function returns counter.
+
