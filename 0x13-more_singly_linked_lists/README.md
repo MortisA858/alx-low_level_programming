@@ -1,4 +1,5 @@
 0. Print list
+
 Explanation:
 
 #include <stdio.h>
@@ -28,7 +29,9 @@ Finally, the count variable is returned as the result of the function, indicatin
 
 
 1. List length
+
 Explanation:
+
 The function listint_len takes a pointer to a linked list as an argument (const listint_t *h), and it returns the length of the linked list.
 
 The variable count is used to keep track of the length of the linked list. It is initialized to 0.
@@ -46,7 +49,9 @@ Finally, the function returns the value of count, which is the length of the lin
 
 
 2. Add node
+
 Explanation:
+
 This function adds a new node to the beginning of a linked list.
 
 The function first allocates memory for a new node using the malloc function and checks if it was successful by checking if the returned pointer is NULL.
@@ -59,7 +64,9 @@ The function finally returns the address of the newly created node.
 
 
 3. Add node at the end
+
 Explanation:
+
 This function add_nodeint_end is used to add a new node at the end of a linked list. Here is what it does line by line:
 
 struct listint_s *new_node, *temp;: declares two pointers of type listint_t named new_node and temp.
@@ -93,6 +100,7 @@ return (new_node);: returns the newly created node.
 
 
 4. Free list
+
 Explanation:
 
 The function takes a pointer head to the first node in a linked list of type listint_t.
@@ -109,6 +117,7 @@ The loop continues to run, freeing each node in the list, until head becomes NUL
 
 
 5. Free
+
 Explanation:
 
 #include "lists.h" is a preprocessor directive to include the header file lists.h in the program. This header file contains the definition of the data structure listint_t and any other required type or constant definitions for the linked list.
@@ -134,6 +143,7 @@ The loop continues until the value pointed to by *head is NULL, at which point t
 
 
 6. Pop
+
 Explanation:
 
 First, the function checks if the linked list is empty by checking if *head is NULL. If it is, the function returns 0.
@@ -149,6 +159,7 @@ Finally, the function returns the value of n, which is the data of the deleted h
 
 
 7. Get node at index
+
 Explanation:
 
 The function takes a pointer head to the first node of the linked list and an index as input.
@@ -166,6 +177,7 @@ If i is not equal to index, the function returns NULL, indicating that the node 
 
 
 8. Sum list
+
 Explanation:
 
 The function takes a pointer head to the first node of the linked list as input.
@@ -181,7 +193,9 @@ After the loop, the function returns sum, which is the sum of all the data in th
 
 
 9. Insert
+
 Explanation:
+
 This function takes as input a double pointer to the head of a linked list, an index idx, and a value n. It returns a pointer to the newly created node.
 
 The function starts by checking if the head pointer is NULL. If it is, the function returns NULL. Then, it checks if the index is not 0. If it's not, the function traverses the linked list until it reaches the node at the idx - 1 position. If it reaches the end of the linked list without finding the node at the idx - 1 position, it returns NULL.
@@ -193,6 +207,7 @@ Finally, the function returns a pointer to the newly created node.
 
 
 10. Delete at index
+
 Explanation:
 
 The function takes a pointer head to a pointer to the first node of the linked list, and an index (index of the node that should be deleted) as input.
@@ -213,8 +228,10 @@ The function returns 1 indicating success.
 
 
 
-11. 
+11. Reverse List
+
 Explanation
+
 This function reverse_listint is used to reverse a linked list. It takes in a double pointer to the head of the linked list, and returns a pointer to the head of the reversed linked list. The function uses three pointers prev, next, and head, which are initially set to NULL.
 
 Check if the input head is NULL or the linked list is empty. If either of these conditions is true, the function returns NULL.
@@ -236,7 +253,9 @@ Finally, head is set to prev and the reversed linked list is returned.
 
 
 12. Print (safe version)
+
 Explanation:
+
 Two pointers tmp_n and l_n are initialized to NULL, and two variables counter and new_n are initialized to 0.
 
 tmp_n is set to the head of the list.
@@ -266,7 +285,9 @@ Finally, the function returns counter.
 
 
 13. Free (safe version)
+
 Explanation:
+
 A function free_listint_safe is defined which takes a double pointer h to the head of the linked list as an argument. The function returns the size of the list that was freed.
 
 A variable len is initialized to 0, a variable diff is declared, and a pointer temp is declared.
@@ -288,7 +309,9 @@ Finally, the function returns len.
 
 
 14. Find the Loop
+
 Explanation:
+
 The function find_listint_loop takes a pointer head to the head of the linked list as an argument and returns a pointer to the node that starts the loop.
 
 Two pointers slow and fast are declared and initialized to head.
