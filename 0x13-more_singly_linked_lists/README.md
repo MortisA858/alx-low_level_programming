@@ -194,3 +194,27 @@ The first while loop continues until tmp_n is NULL.
 
 Finally, the function returns counter.
 
+
+
+12. Free (safe version)
+Explanation:
+A function free_listint_safe is defined which takes a double pointer h to the head of the linked list as an argument. The function returns the size of the list that was freed.
+
+A variable len is initialized to 0, a variable diff is declared, and a pointer temp is declared.
+
+The function checks if h is NULL or *h (the head of the linked list) is NULL. If either of these conditions is true, the function returns 0.
+
+The while loop starts by checking if *h is not NULL. If it is not, it will enter the loop.
+
+Within the loop, the difference between *h and (*h)->next is calculated and stored in diff.
+
+If diff is greater than 0, it means that the linked list is not a loop, so the next node in the linked list is assigned to temp. The current node that *h is pointing to is freed, *h is set to temp, and len is incremented by 1.
+
+If diff is not greater than 0, it means that the linked list has a loop, so the current node that *h is pointing to is freed, *h is set to NULL, len is incremented by 1, and the loop is broken.
+
+After the loop, *h is set to NULL.
+
+Finally, the function returns len.
+
+
+
