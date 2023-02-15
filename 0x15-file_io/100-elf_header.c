@@ -2,7 +2,7 @@
 
 /*
  * File: 100-elf_header.c
- * Auth:Abel Berhanu
+ * Auth:AlgoSierra
  */
 
 /**
@@ -11,6 +11,7 @@
  *
  * Description: If the file is not an ELF file - exit code 98.
  */
+
 void check_elf(unsigned char *e_ident)
 {
 	int i;
